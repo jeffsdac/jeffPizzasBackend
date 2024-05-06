@@ -14,7 +14,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Pizzas {
+public class Pizza {
     
     @Id
     private int id;
