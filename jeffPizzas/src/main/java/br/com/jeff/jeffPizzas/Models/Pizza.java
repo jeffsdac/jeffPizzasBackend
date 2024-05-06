@@ -1,5 +1,6 @@
 package br.com.jeff.jeffPizzas.Models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -25,5 +26,6 @@ public class Pizza {
 
     private String description;
 
+    @Column(name="BASEPRICE")
     private double basePrice;
 }
