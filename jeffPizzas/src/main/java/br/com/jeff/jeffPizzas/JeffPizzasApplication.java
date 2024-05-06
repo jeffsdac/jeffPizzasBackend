@@ -16,11 +16,7 @@ public class JeffPizzasApplication {
 
 		PizzasOrderService service = context.getBean(PizzasOrderService.class);
 
-		List<PizzasOrder> pedidos = service.getAllPizzasOrders();
-
-		for (PizzasOrder pedido : pedidos){
-			System.out.println(pedido);
-		}
+		
 
 	}
 
