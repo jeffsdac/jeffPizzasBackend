@@ -10,6 +10,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Getter
@@ -17,6 +18,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "T_PIZZAS_DRINKS_ORDERS")
+@ToString
 public class DrinksOrder {
     @Id
     private int id;
@@ -29,9 +31,9 @@ public class DrinksOrder {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "idClient")
-    private int idClient;
+    private Client idClient;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "idPizza")
-    private int idPizza;
+    @JoinColumn(name = "idDrink")
+    private Drink idDrink;
 }
