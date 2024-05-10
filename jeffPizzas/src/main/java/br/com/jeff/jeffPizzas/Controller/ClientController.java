@@ -22,7 +22,7 @@ public class ClientController {
 
     @PostMapping("/login")
     public ResponseEntity<LoginDto> login(@RequestBody LoginDto dto){
-        Client c = service.getByEmail(dto.email());
+        Client c = repository.findByEmail(dto.email());
         
         if(c.getSenha().equals(dto.password())){
             var retorno = new LoginDto(c.getEmail(), c.getSenha());
