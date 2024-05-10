@@ -11,14 +11,14 @@ import org.springframework.web.server.ResponseStatusException;
 
 import br.com.jeff.jeffPizzas.DTO.LoginDto;
 import br.com.jeff.jeffPizzas.Models.Client;
-import br.com.jeff.jeffPizzas.Service.ClientService;
+import br.com.jeff.jeffPizzas.Repository.ClientRepository;
 
 @RestController
 @RequestMapping("/api/client")
 public class ClientController {
     
     @Autowired
-    ClientService service;
+    ClientRepository repository;
 
     @PostMapping("/login")
     public ResponseEntity<LoginDto> login(@RequestBody LoginDto dto){
